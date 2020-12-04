@@ -93,7 +93,7 @@ a {
     .right {
       float: right;
       .header_ul {
-        li {
+        & > li {
           padding-left: 10px;
           padding-right: 10px;
           float: left;
@@ -110,6 +110,10 @@ a {
           &:nth-of-type(4) {
             position: relative;
             .xiala1 {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
               display: none;
               position: absolute;
               left: -13px;
@@ -129,6 +133,10 @@ a {
           &:nth-of-type(6) {
             position: relative;
             .xiala2 {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
               display: none;
               position: absolute;
               left: -40px;
@@ -352,5 +360,63 @@ a {
     width: 1090px;
     background: url(../images/old_top_tit.jpg);
     margin-top: 20px;
+  }
+}
+// 今日上新单品
+.newshop_wrap {
+  height: 25px;
+  .newshop {
+    width: 1090px;
+    height: 25px;
+    background: url(../images/main_tit02_02.png) 0 -202px no-repeat;
+    border-bottom: 2px solid #000;
+    p {
+      font-size: 12px;
+      background: url(../images/clock.jpg) 0 2px no-repeat;
+      float: right;
+      color: #ed135d;
+      text-indent: 20px;
+    }
+  }
+}
+// 商品列表
+.liebiao_wrap {
+  .liebiao {
+    margin: 0 auto;
+    width: 1090px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    figure {
+      margin-top: 20px;
+      background-color: #fff;
+      width: 350px;
+      height: 470px;
+      padding: 10px;
+      // border: 1px solid red;
+      a {
+        display: block;
+        width: 330px;
+        height: 345px;
+        overflow: hidden;
+        img {
+          margin-left: -238px;
+          height: 345px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 24px;
+        color: #333;
+      }
+      b {
+        font-size: 22px;
+        color: #ed145b;
+        line-height: 45px;
+        font-weight: 400;
+      }
+    }
   }
 }
