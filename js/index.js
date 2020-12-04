@@ -12,5 +12,14 @@ $(function() {
     },function(){
         $(".xiala2").stop().slideUp(200);
     })
-    
+    // 底部li滑动效果
+    $(".bottom_hua li").hover(function(){
+        $(this).stop().animate({
+            "left":"8px"
+        },200);
+    },function(){
+        $(this).stop().animate({
+            "left":"0px"
+        },200);
+    })
 })
