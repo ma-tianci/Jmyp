@@ -1,0 +1,356 @@
+/* 公共样式 */
+
+body,
+ul,
+dl,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+fieldset,
+legend,
+header,
+footer,
+nav,
+menu,
+figure,
+figcaption,
+hgroup {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+img,
+fieldset {
+  border: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+}
+
+body {
+  font-family: "微软雅黑";
+  background-color: #f7f7f7;
+}
+
+input,
+a {
+  outline: none;
+}
+
+/* 上面的样式重置-不能动 */
+// 最顶上导航栏
+.con_wrap {
+  height: 28px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
+  .container {
+    width: 1090px;
+    line-height: 28px;
+    font-size: 11px;
+    .left {
+      a {
+        margin-right: 10px;
+        color: #999;
+      }
+    }
+
+    a:hover {
+      color: #ed155b;
+      text-decoration: none;
+    }
+    a:nth-of-type(1) {
+      color: #999;
+      text-decoration: none;
+    }
+    .right {
+      float: right;
+      .header_ul {
+        li {
+          padding-left: 10px;
+          padding-right: 10px;
+          float: left;
+          i {
+            font-size: 10px;
+          }
+          a {
+            color: #999;
+          }
+          a:hover {
+            color: #ed155b;
+            text-decoration: none;
+          }
+          &:nth-of-type(4) {
+            position: relative;
+            .xiala1 {
+              display: none;
+              position: absolute;
+              left: -13px;
+              width: 100px;
+              border: 1px solid #eee;
+              z-index: 5;
+              border-top: none;
+              background-color: #fff;
+            }
+          }
+          &:nth-of-type(5) {
+            color: #ed155b;
+            a {
+              color: #ed155b;
+            }
+          }
+          &:nth-of-type(6) {
+            position: relative;
+            .xiala2 {
+              display: none;
+              position: absolute;
+              left: -40px;
+              width: 100px;
+              border: 1px solid #eee;
+              border-top: none;
+              background-color: #fff;
+              z-index: 20;
+            }
+          }
+          &:nth-of-type(4):hover {
+            background-color: #fff;
+            i {
+              display: inline-block;
+              transform: rotate(180deg);
+              transition: all 0.2s ease-in-out;
+            }
+          }
+
+          &:nth-of-type(6):hover {
+            background-color: #fff;
+            i {
+              display: inline-block;
+              transform: rotate(180deg);
+              transition: all 0.2s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 第二部分，搜索栏
+.ss_wrap {
+  background-color: #fff;
+  height: 110px;
+  .ssbox {
+    background-color: #fff;
+    width: 1090px;
+    height: 100%;
+    h1 {
+      margin-top: 13px;
+      float: left;
+      cursor: pointer;
+    }
+    #ss_kuang {
+      width: 536px;
+      height: 38px;
+      float: left;
+      margin: 28px 0 0 120px;
+      input {
+        height: 38px;
+        border: 3px solid #ed145b;
+        border-right: none;
+        box-sizing: border-box;
+      }
+      span {
+        button {
+          width: 100px;
+          height: 38px;
+          background-color: #ed145b;
+          box-sizing: border-box;
+          padding: 0;
+          border: none;
+          font-size: 12px;
+          color: #fff;
+          &:focus {
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+              0 0 8px rgba(102, 175, 233, 0.6);
+          }
+        }
+      }
+    }
+    // 搜索框下面导航
+    ul {
+      float: left;
+      margin-left: 135px;
+      margin-top: 8px;
+      li {
+        float: left;
+        margin-right: 8px;
+        a {
+          font-size: 12px;
+          display: block;
+          float: left;
+          color: #999;
+          &:hover {
+            color: #ed155b;
+            text-decoration: none;
+          }
+        }
+        .shu {
+          width: 1px;
+          height: 12px;
+          background-color: #999;
+          margin-left: 8px;
+          float: left;
+          margin-top: 2px;
+        }
+      }
+    }
+    // 右面购物车按钮
+    #ss_car {
+      float: right;
+      position: relative;
+      top: -20px;
+      &:hover .car_xiala {
+        display: block;
+      }
+      &:hover a {
+        border-bottom: #fff;
+        background-color: #fff;
+      }
+      &:hover span {
+        background-color: #fff;
+      }
+      a {
+        float: left;
+        display: block;
+        width: 138px;
+        height: 32px;
+        border: 1px solid #e5e5e5;
+        color: #666;
+        z-index: 10;
+        position: relative;
+        img {
+          float: left;
+          margin-left: 10px;
+        }
+        span {
+          float: right;
+          display: block;
+          width: 92px;
+          height: 100%;
+          background-color: #f8f8f8;
+          line-height: 32px;
+          font-size: 12px;
+          color: #666;
+          text-indent: 6px;
+        }
+      }
+      .car_xiala {
+        width: 300px;
+        height: 62px;
+        background-color: #fff;
+        position: absolute;
+        display: none;
+        top: 31px;
+        left: -162px;
+        border: 1px solid #e5e5e5;
+        p {
+          font-size: 12px;
+          color: #666;
+          width: 150px;
+          line-height: 21px;
+          text-align: center;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+}
+// 黑色导航
+.black_wrap {
+  background-color: #0e0e0e;
+  .black_dh {
+    width: 1090px;
+    ul {
+      float: left;
+      li {
+        float: left;
+        width: 100px;
+        height: 38px;
+        text-align: center;
+        cursor: pointer;
+        &:nth-of-type(1) {
+          background-color: #ed145b;
+        }
+        &:hover a {
+          text-decoration: none;
+          color: #b2b2b2;
+        }
+        a {
+          color: #fff;
+          line-height: 38px;
+        }
+      }
+    }
+    .black_tu {
+      float: right;
+      display: flex;
+      height: 38px;
+      width: 70px;
+      justify-content: space-between;
+      margin-right: 15px;
+      align-items: center;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+// 大图
+.banner_wrap {
+  height: 350px;
+  background: url(../images/242724_1920_350_002-web.jpg) center;
+  .banner_a {
+    width: 1090px;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+// 每日必看
+.bikan_wrap {
+  height: 68px;
+  h2 {
+    height: 28px;
+    width: 1090px;
+    background: url(../images/old_top_tit.jpg);
+    margin-top: 20px;
+  }
+}
