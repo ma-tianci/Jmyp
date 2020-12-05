@@ -66,7 +66,12 @@ a {
 }
 
 /* 上面的样式重置-不能动 */
+body,
+html {
+  height: 100%;
+}
 // 最顶上导航栏
+
 .con_wrap {
   height: 28px;
   background-color: #f2f2f2;
@@ -743,6 +748,124 @@ a {
       &:nth-of-type(5) {
         width: 55px;
         height: 50px;
+      }
+    }
+  }
+}
+// 右面固定导航栏
+#right_box {
+  width: 40px;
+  height: 100%;
+  background-color: #444851;
+  position: fixed;
+  right: 0;
+  top: 0;
+  > .zhongjian {
+    margin-top: 200px;
+    position: relative;
+    > #one_box {
+      width: 40px;
+      height: 38px;
+      display: block;
+      position: relative;
+      padding-top: 9px;
+      cursor: pointer;
+      &:hover {
+        background-color: #ed145b;
+        h3 {
+          background: url(../images/ibar_sprites.png) no-repeat -33px 0;
+        }
+      }
+      &:hover #tanchu_box {
+        display: block;
+      }
+      h3 {
+        background: url(../images/ibar_sprites.png) no-repeat;
+        overflow: hidden;
+        width: 18px;
+        height: 19px;
+        margin: 0 auto;
+      } // 弹出框
+      #tanchu_box {
+        display: none;
+        padding: 12px;
+        width: 287px;
+        height: 205px;
+        background-color: #fff;
+        border: 1px solid #cacaca;
+        position: absolute;
+        left: -287px;
+        top: 0;
+        // 上面头像和登录注册
+        .top_box {
+          border-bottom: 1px dotted #d5d5d5;
+          h2 {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 8px;
+          }
+          p {
+            margin-top: 8px;
+            text-align: center;
+            margin-bottom: 18px;
+            a {
+              color: #ed145b;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        // 下面两个按钮
+        .bottom_box {
+          a {
+            display: block;
+            width: 94px;
+            height: 30px;
+            background: url(../images/ibar_sprites.png) 0 -408px;
+            border: 1px solid #e8e8e8;
+            float: left;
+            margin-top: 15px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #333;
+            &:hover {
+              border: 1px solid #ebd0d9;
+              background: url(../images/ibar_sprites.png) 0 -368px;
+              text-decoration: none;
+            }
+            &:nth-of-type(2) {
+              margin-left: 10px;
+            }
+            &:nth-of-type(1) {
+              margin-left: 33px;
+            }
+          }
+        }
+        // 关闭图标和三角图标
+        .guanbi {
+          width: 20px;
+          height: 20px;
+          overflow: hidden;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -272px;
+          position: absolute;
+          right: 9px;
+          top: 9px;
+          cursor: pointer;
+        }
+        .sanjiao {
+          width: 5px;
+          height: 10px;
+          overflow: hidden;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -253px;
+          position: absolute;
+          right: -5px;
+          top: 15px;
+        }
       }
     }
   }
