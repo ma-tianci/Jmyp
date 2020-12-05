@@ -1072,19 +1072,44 @@ html {
     .ma {
       width: 40px;
       height: 38px;
-      overflow: hidden;
+      // overflow: hidden;
       cursor: pointer;
       margin-top: 10px;
       margin-top: 200px;
+      position: relative;
+      padding-top: 9px;
       &:hover {
         background-color: #ed145b;
+      }
+      &:hover .photo_ma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       p {
         width: 18px;
         height: 18px;
         background: url(../images/ibar_sprites.png) no-repeat 0 -302px;
         margin: 0 auto;
-        margin-top: 9px;
+      }
+      // 手机二维码
+      .photo_ma {
+        width: 168px;
+        height: 195px;
+        background-color: #fff;
+        position: absolute;
+        top: -157px;
+        left: -168px;
+
+        display: none;
+        h6 {
+          width: 5px;
+          height: 9px;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -253px;
+          position: absolute;
+          right: -5px;
+          top: 172px;
+        }
       }
     }
     // 客服中心
