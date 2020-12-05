@@ -22,4 +22,28 @@ $(function() {
             "left":"0px"
         },200);
     })
+    // 右边导航栏弹出框向右滑动效果
+    function dh_right (fu,zi){
+        $(fu).hover(function(){
+            $(zi).css({
+                "display":"block"
+            }).stop().animate({
+                "left":"-92px",
+                "opacity":"1"
+            },300)
+
+        },function(){
+            $(zi).css({
+                "display":"none"
+            }).stop().animate({
+                "left":"-132px",
+                "opacity":"0.2"
+            },300)
+        })
+    }
+    dh_right(".caichan",".caichan h3");
+    dh_right(".xinyuan",".xinyuan h3");
+    dh_right(".kanguo",".kanguo h3");
+    dh_right(".kefu",".kefu h3");
+    
 })

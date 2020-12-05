@@ -532,6 +532,8 @@ html {
 }
 // 底部我为自己代言
 .daiyan_wrap {
+  margin-top: 20px;
+
   height: 562px;
   background-color: #fff;
   border-top: 1px solid #ccc;
@@ -761,7 +763,7 @@ html {
   right: 0;
   top: 0;
   > .zhongjian {
-    margin-top: 200px;
+    margin-top: 240px;
     position: relative;
     > #one_box {
       width: 40px;
@@ -770,6 +772,7 @@ html {
       position: relative;
       padding-top: 9px;
       cursor: pointer;
+      margin-bottom: 20px;
       &:hover {
         background-color: #ed145b;
         h3 {
@@ -866,6 +869,268 @@ html {
           right: -5px;
           top: 15px;
         }
+      }
+    }
+    // 购物车
+    .car_box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      cursor: pointer;
+      &:hover {
+        background-color: #ed145b;
+        .car_tu {
+          background: url(../images/ibar_sprites.png) no-repeat -33px -29px;
+        }
+        .hengxian1,
+        .hengxian2 {
+          background-color: #ed145b;
+          border-color: #ed145b;
+        }
+      }
+      .hengxian1 {
+        margin-bottom: 9px;
+        width: 27px;
+        height: 1px;
+        border-top: 1px solid #31343b;
+        background-color: #575b64;
+      }
+      .hengxian2 {
+        margin-top: 9px;
+
+        width: 27px;
+        height: 1px;
+        border-top: 1px solid#575b64;
+        background-color: #31343b;
+      }
+      .car_tu {
+        width: 23px;
+        height: 18px;
+        background: url(../images/ibar_sprites.png) no-repeat 0 -29px;
+        margin: 3px;
+      }
+      span {
+        margin: 3px;
+        color: #fff;
+        width: 12px;
+        font-size: 12px;
+        display: block;
+      }
+      b {
+        color: #fff;
+
+        display: block;
+        width: 23px;
+        height: 23px;
+        background-color: #ed135d;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 23px;
+        font-size: 10px;
+      }
+    }
+    // 我的财产
+    .caichan {
+      width: 40px;
+      height: 38px;
+      // overflow: hidden;
+      cursor: pointer;
+      margin-top: 10px;
+      position: relative;
+      padding-top: 9px;
+      // 弹出框
+      h3 {
+        display: none;
+        font-size: 12px;
+        width: 92px;
+        height: 38px;
+        text-align: center;
+        line-height: 38px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: -132px;
+        background-color: #454851;
+        opacity: 0.3;
+        i {
+          display: block;
+          width: 5px;
+          height: 9px;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -234px;
+          position: absolute;
+          right: -5px;
+          top: 14px;
+        }
+      }
+      &:hover {
+        background-color: #ed145b;
+        p {
+          background: url(../images/ibar_sprites.png) no-repeat -33px -57px;
+        }
+      }
+
+      p {
+        width: 18px;
+        height: 18px;
+        background: url(../images/ibar_sprites.png) no-repeat 0 -57px;
+        margin: 0 auto;
+      }
+    }
+    // 我的心愿单
+    .xinyuan {
+      width: 40px;
+      height: 38px;
+      // overflow: hidden;
+      cursor: pointer;
+      margin-top: 10px;
+      position: relative;
+      padding-top: 9px;
+      // 弹出框
+      h3 {
+        display: none;
+        font-size: 12px;
+        width: 92px;
+        height: 38px;
+        text-align: center;
+        line-height: 38px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: -132px;
+        background-color: #454851;
+        opacity: 0.3;
+        i {
+          display: block;
+          width: 5px;
+          height: 9px;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -234px;
+          position: absolute;
+          right: -5px;
+          top: 14px;
+        }
+      }
+      &:hover {
+        background-color: #ed145b;
+        p {
+          background: url(../images/ibar_sprites.png) no-repeat -33px -85px;
+        }
+      }
+      p {
+        width: 18px;
+        height: 18px;
+        background: url(../images/ibar_sprites.png) no-repeat 0 -85px;
+        margin: 0 auto;
+      }
+    }
+    // 看过
+    .kanguo {
+      width: 40px;
+      height: 38px;
+      // overflow: hidden;
+      cursor: pointer;
+      padding-top: 9px;
+      position: relative;
+      margin-top: 10px;
+      // 弹出框
+      h3 {
+        display: none;
+        font-size: 12px;
+        width: 92px;
+        height: 38px;
+        text-align: center;
+        line-height: 38px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: -132px;
+        background-color: #454851;
+        opacity: 0.3;
+        i {
+          display: block;
+          width: 5px;
+          height: 9px;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -234px;
+          position: absolute;
+          right: -5px;
+          top: 14px;
+        }
+      }
+      &:hover {
+        background-color: #ed145b;
+        p {
+          background: url(../images/ibar_sprites.png) no-repeat -33px -110px;
+        }
+      }
+      p {
+        width: 18px;
+        height: 18px;
+        background: url(../images/ibar_sprites.png) no-repeat 0 -110px;
+        margin: 0 auto;
+      }
+    }
+    // 二维码
+    .ma {
+      width: 40px;
+      height: 38px;
+      overflow: hidden;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-top: 200px;
+      &:hover {
+        background-color: #ed145b;
+      }
+      p {
+        width: 18px;
+        height: 18px;
+        background: url(../images/ibar_sprites.png) no-repeat 0 -302px;
+        margin: 0 auto;
+        margin-top: 9px;
+      }
+    }
+    // 客服中心
+    .kefu {
+      width: 40px;
+      height: 38px;
+      // overflow: hidden;
+      position: relative;
+      padding-top: 9px;
+      cursor: pointer;
+      margin-top: 10px;
+      // 弹出框
+      h3 {
+        display: none;
+        font-size: 12px;
+        width: 92px;
+        height: 38px;
+        text-align: center;
+        line-height: 38px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: -132px;
+        background-color: #454851;
+        opacity: 0.3;
+        i {
+          display: block;
+          width: 5px;
+          height: 9px;
+          background: url(../images/ibar_sprites.png) no-repeat 0 -234px;
+          position: absolute;
+          right: -5px;
+          top: 14px;
+        }
+      }
+      &:hover {
+        background-color: #ed145b;
+        p {
+          background: url(../images/ibar_sprites.png) no-repeat -33px -175px;
+        }
+      }
+      p {
+        width: 18px;
+        height: 18px;
+        background: url(../images/ibar_sprites.png) no-repeat 0 -175px;
+        margin: 0 auto;
       }
     }
   }
