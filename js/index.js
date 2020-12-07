@@ -65,4 +65,9 @@ $(function() {
           prevEl: ".swiper-button-prev",
         },
       });
+      if(localStorage.getItem("yonghu")){
+          $("#yidenglu").html(localStorage.getItem("yonghu")+"已登录").css({
+              "color":" #e31256"
+          });
+      }
 })
