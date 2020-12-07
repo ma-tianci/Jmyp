@@ -45,5 +45,24 @@ $(function() {
     dh_right(".xinyuan",".xinyuan h3");
     dh_right(".kanguo",".kanguo h3");
     dh_right(".kefu",".kefu h3");
-    
+    // 轮播图
+    var swiper3 = new Swiper(".lunbo", {
+        effect: "fade", //切换方式为渐变
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2000, //自动轮播速度单位毫秒
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 })

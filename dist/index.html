@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/jquery1.11.js"></script>
     <script src="js/jqueryui.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   </head>
 
   <body>
@@ -221,7 +223,25 @@
     </div>
     <!-- 大图 -->
     <div class="banner_wrap">
-      <a href="" class="banner_a"></a>
+      <div class="swiper-container lunbo">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="lun1">
+              <a href="html/liebiao.html" class="banner_a"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="lun2">
+              <a href="html/liebiao.html" class="banner_a"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+      </div>
     </div>
     <!-- 每日必看 -->
     <div class="bikan_wrap">
