@@ -1,0 +1,331 @@
+/* 公共样式 */
+
+body,
+ul,
+dl,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+fieldset,
+legend,
+header,
+footer,
+nav,
+menu,
+figure,
+figcaption,
+hgroup {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+img,
+fieldset {
+  border: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+}
+
+body {
+  font-family: "微软雅黑";
+  background-color: #f7f7f7;
+}
+
+input,
+a {
+  outline: none;
+}
+
+/* 上面的样式重置-不能动 */
+body,
+html {
+  height: 100%;
+}
+// 最顶上导航栏
+
+.con_wrap {
+  height: 28px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
+  .container {
+    width: 1090px;
+    line-height: 28px;
+    font-size: 11px;
+    .left {
+      a {
+        margin-right: 10px;
+        color: #999;
+      }
+    }
+
+    a:hover {
+      color: #ed155b;
+      text-decoration: none;
+    }
+    a:nth-of-type(1) {
+      color: #999;
+      text-decoration: none;
+    }
+    .right {
+      float: right;
+      .header_ul {
+        & > li {
+          padding-left: 10px;
+          padding-right: 10px;
+          float: left;
+          i {
+            font-size: 10px;
+          }
+          a {
+            color: #999;
+          }
+          a:hover {
+            color: #ed155b;
+            text-decoration: none;
+          }
+          &:nth-of-type(4) {
+            position: relative;
+            .xiala1 {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+              display: none;
+              position: absolute;
+              left: -13px;
+              width: 100px;
+              border: 1px solid #eee;
+              z-index: 5;
+              border-top: none;
+              background-color: #fff;
+            }
+          }
+          &:nth-of-type(5) {
+            color: #ed155b;
+            a {
+              color: #ed155b;
+            }
+          }
+          &:nth-of-type(6) {
+            position: relative;
+            .xiala2 {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+              display: none;
+              position: absolute;
+              left: -40px;
+              width: 100px;
+              border: 1px solid #eee;
+              border-top: none;
+              background-color: #fff;
+              z-index: 20;
+            }
+          }
+          &:nth-of-type(4):hover {
+            background-color: #fff;
+            i {
+              display: inline-block;
+              transform: rotate(180deg);
+              transition: all 0.2s ease-in-out;
+            }
+          }
+
+          &:nth-of-type(6):hover {
+            background-color: #fff;
+            i {
+              display: inline-block;
+              transform: rotate(180deg);
+              transition: all 0.2s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// 极速免税店
+.mianshui_wrap {
+  height: 92px;
+  background-color: #fff;
+  .mianshui {
+    width: 1090px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    h1 {
+      width: 250px;
+      height: 88px;
+      background: url(../images/home_logo.png) no-repeat;
+    }
+    h2 {
+      width: 167px;
+      height: 32px;
+      background: url(../images/maincart.png) no-repeat;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      font-size: 12px;
+      line-height: 32px;
+      text-indent: 46px;
+      color: #565656;
+      cursor: pointer;
+      &:hover {
+        background: url(../images/maincart.png) no-repeat 0 -32px;
+      }
+      &:hover .mai_xiala {
+        display: block;
+      }
+      .mai_xiala {
+        z-index: 10;
+        width: 335px;
+        height: 199px;
+
+        border: 1px solid #d0d0d0;
+        position: absolute;
+        left: -169px;
+        background: url(../images/nav_null_cart.jpg) no-repeat 20px 50px;
+        background-color: #fff;
+        display: none;
+
+        p {
+          width: 130px;
+          font-size: 12px;
+          color: #343434;
+          line-height: 19px;
+          position: absolute;
+          top: 80px;
+          left: 160px;
+          text-indent: 0;
+        }
+      }
+    }
+  }
+}
+body {
+  background-color: #fff;
+}
+
+.xq {
+  width: 1090px;
+  margin: 0 auto;
+}
+
+.xq_wrap {
+  .xq {
+    height: 470px;
+    .xq_tu {
+      margin-left: 20px;
+      margin-top: 50px;
+      float: left;
+      width: 575px;
+      height: 360px;
+      overflow: hidden;
+      border: 1px solid #eeeeee;
+      img {
+        height: 360px;
+      }
+    }
+    .xq_xinxi {
+      float: left;
+      width: 400px;
+      height: 300px;
+      margin: 80px 0 0 60px;
+
+      h2 {
+        font-size: 16px;
+        color: #636363;
+        line-height: 40px;
+        font-weight: 600;
+      }
+      h3 {
+        font-size: 16px;
+        color: #636363;
+        line-height: 40px;
+        // font-weight: 600;
+      }
+      b {
+        font-size: 14px;
+        line-height: 50px;
+        color: #939393;
+        span {
+          font-size: 20px;
+          color: #dd467d;
+        }
+      }
+      .che {
+        margin-top: 20px;
+        .tianjia {
+          width: 70px;
+          height: 46px;
+          text-align: center;
+          float: left;
+          #zhi {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #636363;
+            line-height: 44px;
+            border-right: none;
+            float: left;
+            text-indent: 14px;
+          }
+          #jia {
+            width: 15px;
+            float: left;
+            border: 1px solid #636363;
+            height: 22px;
+            border-bottom: none;
+            cursor: pointer;
+          }
+          #jian {
+            width: 15px;
+            float: left;
+            border: 1px solid #636363;
+            cursor: pointer;
+            height: 20px;
+          }
+        }
+        button {
+          float: left;
+          width: 142px;
+          height: 46px;
+          background-color: #df3133;
+          border: none;
+          margin-left: 50px;
+          color: #fff;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
