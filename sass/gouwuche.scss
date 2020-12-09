@@ -81,15 +81,17 @@ a {
     font-size: 12px;
     color: #434343;
     line-height: 42px;
+
     .quanxuan {
       float: left;
     }
     .jiesuan {
       margin-left: 50px;
       float: left;
-      width: 150px;
+      width: 200px;
       height: 100%;
-      margin-right: 25px;
+      margin-right: 0;
+
       p {
         float: left;
         font-size: 10px;
@@ -106,9 +108,15 @@ a {
         font-size: 16px;
         font-weight: 600;
         color: #e2231a;
-        border: 1px solid #e2231a;
+        border: none;
         cursor: pointer;
         margin-left: 10px;
+      }
+      b {
+        span {
+          color: #e2231a;
+          margin-left: 10px;
+        }
       }
     }
     p {
@@ -117,13 +125,13 @@ a {
         margin-left: 10px;
       }
       &:nth-of-type(2) {
-        margin-left: 80px;
+        margin-left: 243px;
       }
       &:nth-of-type(3) {
-        margin-left: 74px;
+        margin-left: 84px;
       }
       &:nth-of-type(4) {
-        margin-left: 100px;
+        margin-left: 90px;
       }
       &:nth-of-type(5) {
         margin-left: 55px;
@@ -166,15 +174,15 @@ a {
           font-style: normal;
           font-size: 10px;
           color: #333;
-          margin-left: 20px;
+          margin-left: 40px;
         }
         .tianjia {
-          margin-left: 38px;
+          margin-left: 45px;
           color: #232326;
           display: flex;
           text-align: center;
           .jia {
-            width: 15px;
+            width: 20px;
             height: 20px;
             border: 1px solid #cbcbcb;
             line-height: 20px;
@@ -187,11 +195,11 @@ a {
             font-size: 12px;
             border: 1px solid #cbcbcb;
             background-color: #fff;
-            text-indent: 15px;
+            text-indent: 18px;
             margin: 0;
           }
           .jian {
-            width: 15px;
+            width: 20px;
             height: 20px;
             border: 1px solid #cbcbcb;
             line-height: 20px;
@@ -212,9 +220,57 @@ a {
           height: 20px;
           font-size: 12px;
           cursor: pointer;
-          margin-left: 10px;
+          margin-left: 30px;
         }
       }
     }
+  }
+}
+// 充值窗口
+.chongzhi {
+  display: none;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  padding: 100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  // border: 1px solid #999;
+  border-radius: 10px;
+  background-color: #eee;
+  p {
+    font-size: 20px;
+    text-align: center;
+  }
+  #chongzhi {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  #quxiao {
+    width: 100px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 30px;
+    background-color: #f8296d;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+  }
+  #chong {
+    width: 100px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+    background-color: green;
+    color: #fff;
+    font-size: 20px;
+    border: none;
   }
 }

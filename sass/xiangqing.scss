@@ -245,15 +245,41 @@ body {
   .xq {
     height: 470px;
     .xq_tu {
-      margin-left: 20px;
+      margin-left: 0px;
       margin-top: 50px;
       float: left;
       width: 575px;
       height: 360px;
       overflow: hidden;
       border: 1px solid #eeeeee;
+      position: relative;
       img {
-        height: 360px;
+        height: 100%;
+        width: 100%;
+      }
+      .lens {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+      }
+    }
+    .xq_tu1 {
+      margin-left: 0px;
+      margin-top: 50px;
+      float: left;
+      width: 400px;
+      height: 400px;
+      top: 100px;
+      left: 800px;
+      overflow: hidden;
+      // border: 1px solid #eeeeee;
+      position: absolute;
+      display: none;
+      img {
+        width: 1150px;
+        height: 720px;
+        opacity: 0;
+        position: absolute;
       }
     }
     .xq_xinxi {
