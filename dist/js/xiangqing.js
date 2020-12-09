@@ -23,6 +23,7 @@
         $('#mingcheng').html(`${res.data.pname}`)
         $('#miaoshu').html(`${res.data.pdesc}`)
         $('#jiage span').html(`${res.data.pprice}`)
+        shuzhi();
     }
 })
 //  加入购物车
@@ -163,4 +164,17 @@ function youwu(){
 }
 function wu(){
   $(".mai_xiala p").text("购物车中还没有商品，赶快去挑选心爱的商品吧！")
+}
+
+ // input框
+ function shuzhi(){
+  $("#zhi").focus(function(){
+ let shu=$(this).val();
+ console.log(shu);
+ localStorage.setItem("shu",JSON.stringify(shu))
+}).blur(function(){
+let shu1= JSON.parse(localStorage.getItem("shu")); 
+console.log(shu1);
+$(this).val(shu1);
+})
 }

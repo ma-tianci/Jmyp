@@ -40,11 +40,24 @@ $(function () {
         dataAdd(); //增加商品
         dataReduce(); //减少商品
         jiean();//结算按钮
+        shuzhi();//input框
       },
     });
   }
   mm();
-  // 单价和总价的计算
+  // input框
+  function shuzhi(){
+     $(".zhi").focus(function(){
+    let shu=$(this).val();
+    console.log(shu);
+    localStorage.setItem("shu",JSON.stringify(shu))
+  }).blur(function(){
+   let shu1= JSON.parse(localStorage.getItem("shu")); 
+   console.log(shu1);
+   $(this).val(shu1);
+  })
+  }
+ 
 
   //减少商品
   function dataReduce() {
