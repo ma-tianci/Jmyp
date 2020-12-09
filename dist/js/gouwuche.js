@@ -1,5 +1,5 @@
-// 获取购物车中商品
 $(function () {
+  // 获取购物车中商品
   if(localStorage.getItem("u-id")){
      function mm() {
     $.ajax({
@@ -8,7 +8,6 @@ $(function () {
       data: {
         id: localStorage.getItem("u-id"),
       },
-      // async: false,
       success: function (res) {
         console.log(res.data);
         let html = "";

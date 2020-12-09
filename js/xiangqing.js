@@ -53,7 +53,7 @@ $.ajax({
     },
     success:function(res){
         alert("加入购物车成功");
-        
+        console.log(res)
         location.href = "gouwuche.html";
     },
     error:function(){
@@ -118,4 +118,49 @@ function window_drage(box, box1, pic, mul) {
       })
     };
   };
+}
+
+ //   判断是否登录
+ if(localStorage.getItem("yonghu")){
+  //   导航状态
+    $("#yidenglu").html("已登录").css({
+        "color":" #e31256"
+    });
+    $("#zhuxiao").css({
+        "display":"inline-block"
+    }).click(function(){
+        localStorage.removeItem("u-id");
+        localStorage.removeItem("u-token");
+        localStorage.removeItem("yonghu");
+    })
+ 
+}
+
+// 判断购物车里是否有商品，然后改变状态
+$.ajax({
+  type: "Get",
+  url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
+  data: {
+    id: localStorage.getItem("u-id"),
+  },
+  success: function (res) {
+    console.log(res);
+    console.log(res.data.length);
+
+    console.log(res.data.length==0)
+      if(res.data.length==0){
+          wu();
+      }else{
+           youwu();
+      }
+    
+   
+  },
+});
+
+function youwu(){
+    $(".mai_xiala p").text("你的商品宝宝等你很久了，快去清空吧")
+}
+function wu(){
+  $(".mai_xiala p").text("购物车中还没有商品，赶快去挑选心爱的商品吧！")
 }

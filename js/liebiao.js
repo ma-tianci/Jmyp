@@ -211,7 +211,6 @@ $(function() {
   $("#yonghum").html("你好！"+localStorage.getItem("yonghu")).css({
       "color":" #e31256"
   });
-}
 
 // 判断购物车里是否有商品，然后改变状态
 $.ajax({
@@ -228,6 +227,7 @@ $.ajax({
       if(res.data.length==0){
           wu();
       }else{
+        $("#gouwucheshu").text(res.data.length)
            youwu();
       }
     
@@ -236,8 +236,11 @@ $.ajax({
 });
 
 function youwu(){
-    $(".mai_xiala p").text("亲爱的，购物车里的小宝贝迫不及待要跟你回家了")
+    $(".mai_xiala p").text("你的商品宝宝等你很久了，快去清空吧")
 }
 function wu(){
   $(".mai_xiala p").text("购物车中还没有商品，赶快去挑选心爱的商品吧！")
 }
+
+}
+

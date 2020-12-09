@@ -136,7 +136,8 @@ $(function() {
 			})
 
             // 判断购物车里是否有商品，然后改变状态
-            $.ajax({
+            if(localStorage.getItem("yonghu")){
+                $.ajax({
                 type: "Get",
                 url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
                 data: {
@@ -150,6 +151,7 @@ $(function() {
                     if(res.data.length==0){
                         wu();
                     }else{
+                        $("#gouwucheshu").text(res.data.length)
                          youwu();
                     }
                   
@@ -163,4 +165,6 @@ $(function() {
               function wu(){
                 $(".car_xiala p").text("购物车中还没有商品，赶快去挑选心爱的商品吧！")
               }
+            }
+            
 })
