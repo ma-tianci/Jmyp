@@ -65,6 +65,12 @@ var mm = /^[a-zA-Z0-9]{6,16}$/;
             console.log(res);
 
             if (res.code == 1) {
+                if(getCookie("yonghu")){
+                }else{
+                    setCookie("yy",$(".yonghu").val());
+                    setCookie("mm",$(".mima").val());
+                    setCookie("anhao",1);
+                }
                 alert(res.msg);
                 location.href = "denglu.html";
             } else {
@@ -77,4 +83,24 @@ var mm = /^[a-zA-Z0-9]{6,16}$/;
 }
 }
 })
+// 判断是否七天免登陆，没有的话，把用户名密码直接赋值到登录页
+// 封装cookie
+function setCookie(k, v, t) {
+    var oDate = new Date();
+    oDate.setDate(oDate.getDate() + t);
+    document.cookie = `${k}=${v};expires=` + oDate;
+}
+function getCookie(k) {
+    var arr = document.cookie.split("; ");
+    for (var i = 0; i < arr.length; i++) {
+        var arr1 = arr[i].split("=");
+        if (arr1[0] === k) {
+            return arr1[1];
+        }
+    }
+}
+function removeCookie(k) {
+    setCookie(k, 1, -1);
+}
+
 })

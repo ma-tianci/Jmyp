@@ -1,6 +1,7 @@
 // 获取购物车中商品
 $(function () {
-  function mm() {
+  if(localStorage.getItem("u-id")){
+     function mm() {
     $.ajax({
       type: "Get",
       url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
@@ -225,9 +226,10 @@ $(function () {
 
             totoalchoose.checked = false;
             $("#zongjia").text(0);
+            mm();
           },
         });
-        mm();
+        
       }
     }
   }
@@ -292,4 +294,8 @@ $(function () {
     }
   });
 }
+  }
+
+
+ 
 });
