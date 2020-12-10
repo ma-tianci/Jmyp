@@ -67,6 +67,21 @@ $(function() {
       });
     //   判断是否登录
       if(localStorage.getItem("yonghu")){
+
+
+        function qian() {
+            if (localStorage.getItem("u-id")) {
+              let uu = localStorage.getItem("u-id");
+              console.log(uu);
+              if (localStorage.getItem(`${uu}`)) {
+                let qian = localStorage.getItem(`${uu}`);
+                $("#yu").text(qian);
+              } else {
+                localStorage.setItem(`${uu}`, 0);
+              }
+            }
+          }
+          qian(); //调用
         //   导航状态
           $("#yidenglu").html("已登录").css({
               "color":" #e31256"
@@ -82,6 +97,11 @@ $(function() {
         $("#youbianming").html("你好！"+localStorage.getItem("yonghu")).css({
             "color":" #e31256"
         });
+        let woid=localStorage.getItem("u-id");
+        let wodeqian=localStorage.getItem(`${woid}`);
+        console.log(wodeqian)
+        $(".caichan span").html("余额&nbsp;"+wodeqian+"元").css({
+        })
       }
     //   楼梯效果
     let flag = true;

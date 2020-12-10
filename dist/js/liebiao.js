@@ -210,6 +210,7 @@ $(function() {
   //   右边栏状态
   $("#yonghum").html("你好！"+localStorage.getItem("yonghu")).css({
       "color":" #e31256"
+
   });
 
 // 判断购物车里是否有商品，然后改变状态
@@ -242,5 +243,10 @@ function wu(){
   $(".mai_xiala p").text("购物车中还没有商品，赶快去挑选心爱的商品吧！")
 }
 
+let woid=localStorage.getItem("u-id");
+let wodeqian=localStorage.getItem(`${woid}`);
+console.log(wodeqian)
+$(".caichan span").html("余额&nbsp;"+wodeqian+"元").css({
+})
 }
 

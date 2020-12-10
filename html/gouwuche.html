@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <script>
+      //判断是否登录
+      if (!localStorage.getItem("u-id")) {
+        location.href = "denglu.html";
+      }
+    </script>
     <div class="header_wrap">
       <div class="header">
         <div class="quanxuan"><input type="checkbox" id="quan" />全选</div>
@@ -68,6 +74,7 @@
 
       <button id="chong">充值</button>
     </div>
+    <img src="../images/timg.jfif" alt="" / id="kong">
     <script src="../js/gouwuche.js"></script>
   </body>
 </html>
