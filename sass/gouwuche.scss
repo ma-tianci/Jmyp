@@ -65,7 +65,21 @@ a {
 }
 
 /* 上面的样式重置-不能动 */
-
+// 头部logo
+.logo_wrap {
+  height: 100px;
+  border-bottom: 1px solid #e5e5e5;
+  .logotu {
+    margin: 0 auto;
+    width: 990px;
+    overflow: hidden;
+    h1 {
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+  }
+}
+// toubu
 .header,
 .main {
   width: 990px;
@@ -122,7 +136,7 @@ a {
     p {
       float: left;
       &:nth-of-type(1) {
-        margin-left: 10px;
+        margin-left: 30px;
       }
       &:nth-of-type(2) {
         margin-left: 243px;
@@ -232,7 +246,7 @@ a {
   width: 300px;
   height: 200px;
   position: absolute;
-  padding: 100px;
+  padding: 60px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -240,35 +254,41 @@ a {
   margin: auto;
   // border: 1px solid #999;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: rgb(233, 233, 233);
   p {
     font-size: 20px;
     text-align: center;
+    color: rgb(156, 145, 145);
   }
   #chongzhi {
+    border-radius: 10px;
+    border: none;
     width: 250px;
     height: 40px;
-    font-size: 20px;
+    // font-size: 20px;
     text-indent: 20px;
     margin-top: 50px;
     margin-left: 20px;
+    color: #999;
   }
   #quxiao {
     width: 100px;
     height: 50px;
     margin-top: 40px;
     margin-left: 30px;
-    background-color: #f8296d;
+    background-color: #fc6e9d;
     color: #fff;
     font-size: 20px;
     border: none;
+    border-radius: 8px;
   }
   #chong {
+    border-radius: 8px;
     width: 100px;
     height: 50px;
     margin-top: 40px;
     margin-left: 20px;
-    background-color: green;
+    background-color: rgb(96, 228, 96);
     color: #fff;
     font-size: 20px;
     border: none;
@@ -278,4 +298,45 @@ a {
 #kong {
   margin: 0 auto;
   display: none;
+}
+// 底部
+.butto {
+  width: 100%;
+  height: 50px;
+  background: #fafafa;
+  display: flex;
+  line-height: 50px;
+  font-size: 10px;
+  h4 {
+    line-height: 50px;
+    margin-left: 20px;
+  }
+  input {
+    margin-top: 18px;
+  }
+  b {
+    margin-left: 400px;
+    font-weight: 500;
+    display: block;
+    width: 100px;
+  }
+  span {
+    margin-left: 50px;
+  }
+  h5 {
+    color: #fc6e9d;
+    font-size: 14px;
+    margin-left: 10px;
+    display: block;
+    width: 60px;
+    font-weight: 700;
+  }
+  button {
+    margin-left: 60px;
+    width: 140px;
+    background-color: #fc6e9d;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+  }
 }

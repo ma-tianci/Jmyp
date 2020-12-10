@@ -11,9 +11,6 @@
       html {
         height: 100%;
       }
-      body:hover {
-        cursor: url(../images/dog.ico), auto;
-      }
     </style>
   </head>
 
@@ -24,15 +21,14 @@
         location.href = "denglu.html";
       }
     </script>
+    <div class="logo_wrap">
+      <div class="logotu">
+        <h1><img src="../images/cart_logo.jpg" alt="" /></h1>
+      </div>
+    </div>
     <div class="header_wrap">
       <div class="header">
-        <div class="quanxuan"><input type="checkbox" id="quan" />全选</div>
         <div class="jiesuan">
-          <p>
-            总价
-            <span id="zongjia">0</span>
-          </p>
-          <button id="jiesuan">结算</button>
           <b>余额<span id="yu">0</span></b>
         </div>
         <p>商品</p>
@@ -73,6 +69,15 @@
                     </button>
                 </li> -->
         </ul>
+        <!-- 底部 -->
+        <div class="butto">
+          <h4>全选</h4>
+          <input type="checkbox" name="" id="quan" />
+          <b id="bo_ji">共件商品</b>
+          <span>商品应付总额：</span>
+          <h5 id="zongjia">0</h5>
+          <button class="jiesuan">结算</button>
+        </div>
       </div>
     </div>
     <!-- 充值窗口 -->
