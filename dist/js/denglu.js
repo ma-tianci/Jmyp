@@ -25,15 +25,13 @@ $(function () {
     var qi = document.querySelector("#qi");
     console.log(qi);
     qi.checked = true;
-  }else if(getCookie("anhao")==1){
+  } else if (getCookie("anhao") == 1) {
     $(".yonghu").val(getCookie("yy"));
     $(".mima").val(getCookie("mm"));
-    setCookie("anhao",2)
+    setCookie("anhao", 2);
   }
 
-
-
-//   登录
+  //   登录
   $(".btn").click(function () {
     console.log($(".yonghu").val());
     if ($(".yonghu").val() == "" || $(".mima").val() == "") {
@@ -51,7 +49,7 @@ $(function () {
         type: "POST",
         data: {
           username: $(".yonghu").val(),
-          password: $(".mima").val(),
+          password: $(".mima").val()
         },
         success: function (res) {
           console.log(res);
@@ -61,13 +59,13 @@ $(function () {
             localStorage.setItem("yonghu", $(".yonghu").val());
             localStorage.setItem("u-id", res.data.id);
             localStorage.setItem("u-token", res.data.token);
-            
+
             alert("登录成功");
             location.href = "../index.html";
           } else {
             alert(res.msg);
           }
-        },
+        }
       });
     }
   });

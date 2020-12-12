@@ -28,7 +28,7 @@ $(function () {
   }else if(getCookie("anhao")==1){
     $(".yonghu").val(getCookie("yy"));
     $(".mima").val(getCookie("mm"));
-    setCookie("anhao",2)
+    setCookie("anhao",2);
   }
 
 

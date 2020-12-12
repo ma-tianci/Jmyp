@@ -6,12 +6,12 @@ $(function () {
         type: "Get",
         url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
         data: {
-          id: localStorage.getItem("u-id"),
+          id: localStorage.getItem("u-id")
         },
         success: function (res) {
           console.log(res.data);
           let html = "";
-          res.data.forEach((v) => {
+          res.data.forEach(v => {
             html += `<li class="lid">
                     <input type="checkbox" class="choose checked-A-btn">
                     <img src="../${v.pimg}" alt="">
@@ -21,9 +21,7 @@ $(function () {
                         <div class="jian" data-id="${v.pid}">
                             -
                         </div>
-                        <input type="text" value="${
-                          v.pnum
-                        }" class="zhi" data-num="${v.pnum}">
+                        <input type="text" value="${v.pnum}" class="zhi" data-num="${v.pnum}">
                         <div class="jia" data-id="${v.pid}">
                             +
                         </div>
@@ -42,23 +40,21 @@ $(function () {
           jiean(); //结算按钮
           shuzhi(); //input框
           kong(); //购物车为空显示图
-        },
+        }
       });
     }
     mm();
     // input框
     function shuzhi() {
-      $(".zhi")
-        .focus(function () {
-          let shu = $(this).val();
-          console.log(shu);
-          localStorage.setItem("shu", JSON.stringify(shu));
-        })
-        .blur(function () {
-          let shu1 = JSON.parse(localStorage.getItem("shu"));
-          console.log(shu1);
-          $(this).val(shu1);
-        });
+      $(".zhi").focus(function () {
+        let shu = $(this).val();
+        console.log(shu);
+        localStorage.setItem("shu", JSON.stringify(shu));
+      }).blur(function () {
+        let shu1 = JSON.parse(localStorage.getItem("shu"));
+        console.log(shu1);
+        $(this).val(shu1);
+      });
     }
 
     //减少商品
@@ -68,35 +64,23 @@ $(function () {
         if ($(this).next().val() - 0 == 1) {
           return;
         }
-        $(this)
-          .next()
-          .attr("data-num", nowNum - 1);
+        $(this).next().attr("data-num", nowNum - 1);
         $.ajax({
           url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
           type: "Get",
           data: {
             uid: localStorage.getItem("u-id"),
             pid: $(this).attr("data-id"),
-            pnum: nowNum - 1,
+            pnum: nowNum - 1
           },
           success: () => {
-            $(this)
-              .next()
-              .val($(this).next().val() - 1);
-            $(this)
-              .parent()
-              .next()
-              .html(
-                parseInt(
-                  parseInt($(this).parent().prev().html()) *
-                    $(this).next().val()
-                )
-              );
+            $(this).next().val($(this).next().val() - 1);
+            $(this).parent().next().html(parseInt(parseInt($(this).parent().prev().html()) * $(this).next().val()));
             getTotalPrice();
           },
-          error: (error) => {
+          error: error => {
             console.log(error);
-          },
+          }
         });
       });
     }
@@ -105,32 +89,23 @@ $(function () {
     function dataAdd() {
       $(".jia").click(function () {
         let nowNum = $(this).prev().attr("data-num");
-        $(this)
-          .prev()
-          .attr("data-num", nowNum - 0 + 1);
+        $(this).prev().attr("data-num", nowNum - 0 + 1);
         $.ajax({
           url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
           type: "Get",
           data: {
             uid: localStorage.getItem("u-id"),
             pid: $(this).attr("data-id"),
-            pnum: +nowNum + 1,
+            pnum: +nowNum + 1
           },
           success: () => {
-            $(this)
-              .prev()
-              .val($(this).prev().val() - 0 + 1);
-            $(this)
-              .parent()
-              .next()
-              .html(
-                parseInt($(this).parent().prev().html()) * $(this).prev().val()
-              );
+            $(this).prev().val($(this).prev().val() - 0 + 1);
+            $(this).parent().next().html(parseInt($(this).parent().prev().html()) * $(this).prev().val());
             getTotalPrice();
           },
-          error: (error) => {
+          error: error => {
             console.log(error);
-          },
+          }
         });
       });
     }
@@ -201,7 +176,7 @@ $(function () {
             url: "http://jx.xuzhixiang.top/ap/api/cart-delete.php",
             data: {
               uid: localStorage.getItem("u-id"),
-              pid: paid,
+              pid: paid
             },
             success: function () {
               clickchoose();
@@ -211,7 +186,7 @@ $(function () {
 
                 totoalchoose.checked = false;
               }
-            },
+            }
           });
           this.parentNode.remove();
           kong();
@@ -232,7 +207,7 @@ $(function () {
             url: "http://jx.xuzhixiang.top/ap/api/cart-delete.php",
             data: {
               uid: localStorage.getItem("u-id"),
-              pid: paid,
+              pid: paid
             },
             success: function () {
               var totoalchoose = document.querySelector("#quan");
@@ -240,7 +215,7 @@ $(function () {
               totoalchoose.checked = false;
               $("#zongjia").text(0);
               mm();
-            },
+            }
           });
         }
       }
@@ -285,11 +260,11 @@ $(function () {
           kong();
         } else if (Number($("#yu").text()) < Number($("#zongjia").text())) {
           $(".chongzhi").css({
-            display: "block",
+            display: "block"
           });
           $("#quxiao").click(function () {
             $(".chongzhi").css({
-              display: "none",
+              display: "none"
             });
           });
 
@@ -317,7 +292,7 @@ $(function () {
         type: "Get",
         url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
         data: {
-          id: localStorage.getItem("u-id"),
+          id: localStorage.getItem("u-id")
         },
         success: function (res) {
           console.log(res);
@@ -326,22 +301,22 @@ $(function () {
           console.log(res.data.length == 0);
           if (res.data.length == 0) {
             $(".butto").css({
-              display: "none",
+              display: "none"
             });
             $("#bo_ji").text("共0件商品");
             $("#kong").css({
-              display: "block",
+              display: "block"
             });
           } else {
             $(".butto").css({
-              display: "flex",
+              display: "flex"
             });
             $("#kong").css({
-              display: "none",
+              display: "none"
             });
             $("#bo_ji").text("共" + res.data.length + "件商品");
           }
-        },
+        }
       });
     }
   }
